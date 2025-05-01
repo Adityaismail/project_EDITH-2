@@ -66,7 +66,7 @@ class DevicesList extends Widget
         if (empty($timestamp)) return '-';
 
         try {
-            return Carbon::createFromTimestamp($timestamp)->format('d M Y H:i');
+            return Carbon::createFromTimestamp($timestamp)->format('d M Y');
         } catch (\Exception $e) {
             return $timestamp;
         }
